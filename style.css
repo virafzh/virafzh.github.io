@@ -1,0 +1,322 @@
+:root {
+    --pink: #f1a0c3;
+    --bg: #da9bb6;
+    --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+}
+
+body {
+    min-height: 500px;
+    font-size: 1.2rem;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/bgbaruu.png);
+    background-position: center;
+    background-size: cover; /* Menggunakan cover agar gambar selalu terisi di dalam elemen */
+    z-index: -1;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+}
+
+.hero h1,
+.hero h4,
+.hero p,
+.rsvp h2 {
+    text-shadow: var(--shadow);
+}
+
+.hero h1,
+.rsvp h2 {
+    font-family: 'Sacramento', cursive;
+    font-size: 6rem;
+}
+
+.hero h4 {
+    font-size: 1.6rem;
+}
+
+.hero p {
+    font-size: 1.4rem;
+}
+
+.hero a {
+    color: var(--pink);
+    background-color: white;
+    box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+    background-color: var(--pink);
+    color: white;
+}
+
+.mynavbar {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(4px);
+}
+
+.mynavbar .offcanvas {
+    height: 100vh;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3.2rem;
+    color: #f1a0c3;
+}
+
+.mynavbar .navbar-link {
+    text-transform: uppercase;
+}
+
+.home {
+    background-image: url(img/bintang.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    min-height: 100vh;
+    margin-top: -6rem;
+    padding-top: 15rem;
+    padding-bottom: 5rem;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.rounded-img {
+    width: 150px; /* Adjust the circular image size */
+    height: 150px; /* Adjust the circular image size */
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 50px auto 0; /* Increase top margin to move the image further down */
+    display: block;
+}
+
+.additional-img {
+    width: 200px; /* Sesuaikan dengan ukuran yang Anda inginkan */
+    height: 200px; /* Sesuaikan dengan ukuran yang Anda inginkan */
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 10px; /* Sesuaikan dengan jarak dari foto utama */
+}
+
+.home h1 {
+    font-size: 3rem;
+    font-family: 'Moul', cursive;
+    color: #c9a577;
+}
+
+.home h3 {
+    font-family: 'Moul', cursive;
+    font-size: 1.5rem;
+}
+
+.home p,
+.rsvp p {
+    font-family: 'Moul', cursive;
+    color: rgb(136, 88, 136);
+}
+
+.maps {
+    background-image: url(img/bintang.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+
+.maps a {
+    color: var(--pink);
+    background-color: white;
+    box-shadow: var(--shadow);
+}
+
+.maps a:hover {
+    background-color: var(--pink);
+    color: white;
+}
+
+.maps h1 {
+    font-family: "Sacramento", cursive;
+    font-size: 5rem;
+    color: rgb(241, 173, 185);
+    text-shadow: var(--shadow);
+}
+
+.event-box {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 5px dashed #ff9cf2;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 350px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-details {
+    margin-bottom: 20px;
+}
+
+.event-details h2 {
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    margin-bottom: 5px;
+}
+
+.kotak {
+    border-radius: 20%;
+    width: 300px; /* Lebar kotak */
+    height: 350px; /* Tinggi kotak */
+    background-color: #ffffff; /* Warna latar belakang kotak */
+    color: rgb(0, 0, 0); /* Warna teks */
+    border: 30px solid #c97f7f; /* Batas kotak */
+    padding: 50px; /* Padding di dalam kotak */
+    margin: auto;/* Margin di luar kotak */
+    text-align: center; /* Perataan teks di dalam kotak */
+    display: flex; /* Menggunakan Flexbox */
+    align-items: center; /* Mengatur teks agar berada di tengah secara vertikal */
+}
+
+.rsvp {
+    background-image: url(img/bintang.jpg);
+}
+
+.rsvp h2 {
+    color: rgb(241, 173, 185);
+    font-size: 4.5rem;
+}
+
+footer {
+    padding-top: 50%;
+    width: 100%;
+    padding: 4rem;
+    background-color: #c97f7f;
+    color: white;
+}
+
+footer a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Media Query */
+/* laptop */
+@media (max-width: 992px) {
+    html {
+        font-size: 75%;
+    }
+
+    .simply-section {
+        padding: 70px;
+    }
+
+    .event-box {
+        margin: 20px auto; /* Mengatur margin agar elemen berada di tengah */
+        padding: 20px; /* Sesuaikan padding jika diperlukan */
+    }
+
+    .home {
+        background-size: cover; /* Menggunakan cover agar gambar selalu terisi di dalam elemen */
+        background-position: center;
+        padding-top: 10rem;
+        padding-bottom: 4rem;
+    }
+
+    .home h3 {
+        font-size: 2rem; /* Adjust font size for laptop */
+    }
+
+    .nametag-img {
+        width: 300px; /* Adjust nametag size for laptop */
+    }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 65%;
+    }
+
+    .simply-section {
+        padding: 60px;
+        margin: 5px;
+    }
+
+    .home {
+        background-size: cover; /* Menggunakan cover agar gambar selalu terisi di dalam elemen */
+        background-position: center;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    .mynavbar .navbar-link {
+        font-size: 2rem;
+    }
+
+    .home h3 {
+        font-size: 1.8rem; /* Adjust font size for tablet */
+    }
+
+    .nametag-img {
+        width: 250px; /* Adjust nametag size for tablet */
+    }
+
+    .sticky-top {
+        overflow: hidden;
+    }
+}
+
+/* mobile phone */
+@media (max-width: 576px) {
+    html {
+        font-size: 60%;
+    }
+
+    .simply-section {
+        padding: 45px;
+        margin: 3px;
+    }
+
+    .home {
+        background-size: cover; /* Menggunakan cover agar gambar selalu terisi di dalam elemen */
+        background-position: center;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    .mynavbar .navbar-link {
+        font-size: 2rem;
+    }
+
+    .home h3 {
+        font-size: 1.6rem; /* Adjust font size for mobile phone */
+    }
+
+    .nametag-img {
+        width: 200px; /* Adjust nametag size for mobile phone */
+    }
+}
